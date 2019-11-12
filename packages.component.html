@@ -1,0 +1,43 @@
+<!-- Packages -->
+<app-navbar></app-navbar>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div>
+                <div class="text-center dest1"><p>Go, Explore the world</p></div>
+                <div class="text-center dest1"><p style="font-size: 200%">Packages</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div *ngFor="let h of value">
+        <div class="row package_row1 package_padding">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div>
+                    <a href="">
+                        <div class="package_outer"><img src="http://localhost:3000/{{h.Name}}.jpg" alt="" class="package_image"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="package_deal center">
+                <a href="" class="package_p11 package_a1"><p>{{h.Name}}</p></a>
+                <p class="package_p12">{{h.No_of_days}}</p>
+                <p class="package_p12">Places Covered - {{h.Places}}</p>
+                <p>Price -  {{h.Price}}</p>
+                <div class="package_btn_div1">
+                    <button (click)="book(h.Name)" class="btn package_btn package_btn_leftBorder package_btn_rightBorder">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

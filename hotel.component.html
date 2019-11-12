@@ -1,0 +1,34 @@
+
+<app-navbar></app-navbar>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container-fluid">
+  <div class="hotels">
+      <div class="row hotel_head">
+          <div class="col text-center">
+              <div class="section_subtitle">simply amazing places</div>
+              <div class="section_title"><h2>Top Hotels & Resorts</h2></div>
+          </div>
+      </div>
+
+        <div class="hotel_item_row">
+            <div class="hotel_item"  align="center" *ngFor="let h of hotel">
+                <div class="ho d-flex flex-column">
+                    <div class="hotel_img">
+                         <img src="http://localhost:3000/{{h.Hotel_Name}}1.jpg" class="img-fluid" style="background-size: cover;">
+                    </div>
+                    <div class="hotel_content">
+                        <div  class="hotel_title">{{h.Hotel_Name}}</div>
+                        <div><p>{{h.Address}}</p></div>                         
+                        <div><b>{{h.Price}}</b>&nbsp;&nbsp;<span>per night</span></div>      
+                        <div style="margin-top: 3%">
+                            <!-- <a routerLink="/H1"  class="btn package_btn package_btn_leftBorder package_btn_rightBorder">Details</a> -->
+                            <button (click)="details(h.Hotel_Name)">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

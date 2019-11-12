@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="container">
+  <div class="row rev">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+          <form method="POST" class="form-group">
+              <div>
+                  <div class="rev-header">
+                      <h2>
+                          Payment
+                      </h2>
+                      <div>
+                          Please complete the payment details.
+                      </div>
+                      <hr>
+                      <div>
+                        <div class="form-group">
+                          <div>Price: 
+                              
+                            <b>{{details.Price}}</b>
+                          </div>
+                          <div>Pay Amount:
+                            <b>{{total_amount}}</b>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mode of Payment: </label>
+                            <div class="form-group" style="padding-left: 5%;">
+                             
+                              <input type="radio" id="mode" name="payment" value="paytm" (click)= "setradio('paytm')" [(ngModel)]="book.payment_mode">  Paytm<br>
+                                <div class="mode" id="paytm" style="padding-left: 5%;" *ngIf = "isSelected('paytm')">
+                                  Mobile Number: 7737395373
+                                </div>
+
+                              <input type="radio" id="mode" name="payment" value="net-banking"  (click)="setradio('net-banking')" [(ngModel)]="book.payment_mode">  Net Banking<br>
+                                <div class="mode" id="net-banking" style="padding-left: 5%;" *ngIf = "isSelected('net-banking')">
+                                  <div>Bank Name: State Bank of India</div>
+                                  <div>Account Name: Destino Pvt. Ltd.</div>
+                                  <div>Account Number: 00389743443</div>
+                                  <div>IFSC Code: 000345</div>
+                                </div>
+                              <input type="radio" id="mode" name="payment" value="UPI" (click)="setradio('UPI')" [(ngModel)]="book.payment_mode">UPI ID<br>
+                                <div class="mode" id="upi" style="padding-left: 5%;" *ngIf = "isSelected('UPI')">UPI ID: gargashutosh26@paytm</div>
+                            
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label>Transaction ID: </label>
+                          <input type="text" class="form-control" name="transaction" placeholder="Transaction ID" [(ngModel)]="book.transaction_id">
+                        </div>
+                        <div align="center">
+                            <button type="submit" (click)="paynow()">Pay Now</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <div class="col-lg-3"></div>
+  </div>
+</div>

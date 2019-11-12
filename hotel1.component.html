@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<div class="container">
+  <div class="row">
+      <div class="col" align="center">
+          <div style="margin-top: 2%"><p style="font-size: 4vw">{{details.Hotel_Name}}</p></div>
+      </div>
+  </div>
+</div>
+
+
+<div class="swiper-container" style="overflow-x: hidden;">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide" *ngFor = "let ob of v" style="height: 350px; width: 400px; background-size: cover">
+			<img src="http://localhost:3000/{{details.Hotel_Name}}{{ob}}.jpg" alt="" style="height: 350px; width: 400px; background-size: cover">
+		</div>
+	</div>
+</div>
+
+  <div class="swiper-pagination"></div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col" align="justify">
+        <div class="content">
+          <h4>Welcome to the Himalayas</h4>
+          <p>{{details.description}}</p>
+        </div>
+        <div align="right">
+           <button (click)="book(details.Hotel_Name)">Book Now</button>
+        </div>
+    </div>
+  </div>
+</div>

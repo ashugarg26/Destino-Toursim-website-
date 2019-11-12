@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="container"> 
+  <div class="row">
+    <div class="col-lg-6 pak" align="center">
+        <div style="margin-top: 22%">
+            <img src="http://localhost:3000/{{details.Hotel_Name}}1.jpg" name="banner" type="file" class="img-fluid">
+            <h3 style="margin-top: 15px">{{details.Hotel_Name}}</h3>
+        </div>
+    </div>
+      <div class="col-lg-6">
+          <form method="POST" class="form-group">
+              <div class="rev">
+                  <div class="rev-header">
+                      <h2>
+                          Hotel Reservation Form
+                      </h2>
+                      <div>
+                          Please complete the form below.
+                      </div>
+                  </div>
+                  <hr>
+                  <div>
+                      <div class="form-group">
+                          <label>Name: </label>
+                          <input type="text" name="name" class="form-control" placeholder="ex: Destino" [(ngModel)]="book.name">
+                      </div>    
+                      <div class="form-group">
+                          <label>Contact: </label>
+                          <input type="text" name="contact" class="form-control" placeholder="ex: +917737395373" [(ngModel)]="book.contact">
+                      </div>
+                      <div class="form-group">
+                          <label>Email: </label>
+                          <input type="email" name="email" class="form-control" placeholder="ex: destino@gmail.com" [(ngModel)]="book.email">
+                      </div>
+                      <div class="form-group">
+                          <label>Room-type: </label>
+                          <select class="form-control" name="room" [(ngModel)]="book.room">Please Select
+                              <!-- <option value=""> Please Select </option> -->
+                              <option value="Single Bed"> Single Bed </option>
+                              <option value="Double Bed"> Double Bed </option>
+                              <option value="Triple"> Triple </option>
+                              <option value="Quad"> Quad </option>
+                              <option value="Queen"> Queen </option>
+                              <option value="King"> King </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Guest Number: </label>
+                          <input type="number" name="guest" class="form-control" placeholder="Guest NUmber" [(ngModel)]="book.guest">
+                      </div>
+                      <div class="form-group">
+                          <label>Check-in: </label>
+                          <div class="form-control">
+                              <input type="date" name="check_in_date" class="border" [(ngModel)]="book.check_in_date"> - 
+                              <input type="time" name="check_in_time" class="border" [(ngModel)]="book.check_in_time">
+                          </div>
+                          <!-- <div><span class="date">Date</span><span class="form-control">Time</span></div> -->
+                      </div>
+                      <div class="form-group">
+                          <label>Check-out: </label>
+                          <div class="form-control">
+                              <input type="date" name="check_out_date"  class="border" [(ngModel)]="book.check_out_date"> - 
+                              <input type="time" name="check_out_time" class="border" [(ngModel)]="book.check_out_time">
+                              <!-- <div><span class="date">Date</span><span class="time">Time</span></div> -->
+                          </div>
+                      </div>
+                      <div align="center">
+                          <button type="submit" (click)="booking(details.Hotel_Name)">Book</button>
+                      </div>
+                  </div>
+              </div>
+           </form>
+      </div>
+  </div>
+</div>
