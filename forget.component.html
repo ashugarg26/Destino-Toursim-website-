@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<div class="background">
+    <div class="container" *ngIf = "isforget()">
+        <div class="row">
+            <div class="col col_margin" align="center">
+                <div class="outer">
+                    <form action="index.html" method="POST" class="login-form" #form="ngForm">
+                        <div class="box">
+                            <p class="tag">Change Password</p>
+                            <div class="d1">
+                                <input type="text" name="text" class="input" placeholder="Email" [(ngModel)]="user.email" data-validate = "Enter Username" required>
+                            </div>
+                            <div>
+                                <button class="btn" (click)="forget_email(form)">Verify</button>
+                            </div>
+                        </div>
+                        <div class="forget">
+                            <li class="list" style="font-weight: 600;">Want to go Back?<a routerLink="/Login">Click Here</a> </li>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" *ngIf = "is_verify()">
+        <div class="row">
+            <div class="col col_margin" align="center">
+                <div class="outer">
+                    <form action="index.html" method="POST" class="login-form" #form="ngForm">
+                        <div class="box">
+                            <p class="tag">Change Password</p>
+                            <div class="d1">
+                                <input type="text" name="text" class="input" placeholder="Verification Code" [(ngModel)]="Verify" required>
+                                <br><small style="color: black; cursor: pointer;" (click)="random()">Re-Send Verification Code</small>
+                            </div>
+                            <div>
+                                <button class="btn" (click)="Verify_code()">Verify</button>
+                            </div>
+                        </div>
+                        <div class="forget">
+                            <li class="list" style="font-weight: 600;">Want to go Back?<a routerLink="/Login">Click Here</a> </li>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" *ngIf = "is_update()">
+        <div class="row">
+            <div class="col col_margin" align="center">
+                <div class="outer">
+                    <form action="index.html" method="POST" class="login-form" #form="ngForm">
+                        <div class="box">
+                            <p class="tag">Change Password</p>
+                            <div class="d1">
+                                <input type="password" name="password" class="input" placeholder="Password" [(ngModel)]="user.password" required>
+                            </div>
+                            <div class="d1">
+                                <input type="password" name="password" class="input" placeholder="Confirm Password" [(ngModel)]="confirm" required>
+                            </div>
+                            <div>
+                                <button class="btn" (click)="update_password()">Update</button>
+                            </div>
+                        </div>
+                        <div class="forget">
+                            <li class="list" style="font-weight: 600;">Want to go Back?<a routerLink="/Login">Click Here</a> </li>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

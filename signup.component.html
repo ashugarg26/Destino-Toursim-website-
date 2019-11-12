@@ -1,0 +1,39 @@
+<div class="body">
+<div class="container">
+    <div class="row">
+        <div class="col" align="center">
+            <div class="outer">
+                <form action="index.html" method="POST" class="login-form" #form="ngForm">
+                    <div class="box">
+                        <p class="tag">Destino</p>
+                        <div class="d1">
+                            <input type="text" name="text" #name="ngModel" [class.myclass]='name.invalid && name.touched' class="input" placeholder="Username" [(ngModel)]="user.username" data-validate = "Enter Username" ng-required="true"/>
+                        </div>
+                        <div class="d1">
+                            <input type="email" name="password" #email="ngModel" [class.myclass]='email.invalid && email.touched' class="input" placeholder="Email" [(ngModel)]="user.email" data-validate = "Enter email" required>
+                        </div>
+                        <div class="d1">
+                            <input type="text" name="contact" class="input" #contact="ngModel" [class.myclass]='contact.invalid && contact.touched' placeholder="Contact Number" [(ngModel)]="user.contact" pattern="[6-9]{1}[0-9]{9}" required>
+                        </div>
+                        <div class="d1">
+                            <input type="password" name="password" class="input" #password="ngModel" [class.myclass]='password.invalid && password.touched' placeholder="Password" [(ngModel)]="user.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" data-validate = "Enter password" required>
+                        </div>
+                        <!-- password {{password.errors|json}} -->
+                        <div class="d1">
+                            <input type="password" name="confirm_password"  class="input" #confirm_password="ngModel" [(ngModel)]="confirm" [class.myclass]='confirm_password.invalid && confirm_password.touched' placeholder="Confirm Password" data-validate = "Enter password" required>
+                        </div>
+                        <div>
+                            <!-- <a href="index.html"><button class="btn">Sign Up</button></a> -->
+                            <button type="submit" class="btn" (click)="Submit(form)">Sign Up</button>
+                            <!-- <input type="submit" class="btn">SignUp -->
+                        </div>
+                        <div style="margin-top: 20px; color: black;">
+                            <li class="list" style="margin-left: -32px; font-weight: 600;">Want to go Back?<a routerLink="/Login" style="color: white">Click Here</a> </li>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

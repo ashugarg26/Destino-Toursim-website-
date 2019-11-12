@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:400,500,600,700');
+ul
+{
+    list-style: none;
+    margin-left: -50px;
+}
+.footer_back
+{
+    background-image: url(../../assets/images/footer_1.jpg); 
+    height:100%;
+    background-size:cover; 
+    background-position: center;
+}
+.footer_contact_icon
+{
+    width: 68px;
+    height: 68px;
+    margin-left: 42%;
+    
+}
+.footer_contact_icon img
+{
+    max-width: 100%;
+}
+.footer_contact_title
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 18px;
+    text-align: center;
+}
+.footer_contact_list
+{
+    margin-top: 19px;
+}
+.footer_contact_list ul li
+{
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.71;
+    text-align: center;
+}
+.footer_copy
+{
+    margin-top:5%; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.9285;
+    font-weight: 400;
+    color:rgb(146, 141, 141);
+}

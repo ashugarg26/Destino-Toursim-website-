@@ -1,0 +1,94 @@
+div.outer{
+    width: 350px;
+    height: 590px;
+    margin-top: 5%;
+    overflow: hidden;
+}
+div.d1{
+    padding: 6%;
+}
+.input{
+    height: 8%;
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: solid 2px white;
+    outline: none;
+    font-size: 18px;
+}
+input[type="text"]
+{
+    background: transparent;
+    /* border: none; */
+}
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active {
+    /* transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important; */
+    background: none;
+}
+.tag{
+    padding: 10%;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+.box{
+    margin-top:  10px;
+}
+.background{
+    height: 657px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../../assets/images/home_slider.jpg");
+}
+.btn{
+    margin-top: 20px;
+    height: 40px;
+    width: 270px;
+    border-color: white;
+    border-radius: 20px;
+    opacity: 4;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: aliceblue;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+.login-form{
+    position:relative;
+    box-sizing:border-box;
+    transition:.5%;
+}
+div.outer:hover
+{
+    opacity: 10;
+    box-shadow: 0px 0px 8px 8px black;
+}
+.login-form input::placeholder{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+div.forget{
+    margin-top: 24px;
+    text-align: center;
+    margin-left: -30px;
+}
+.list{
+    margin-top: 8px;
+}

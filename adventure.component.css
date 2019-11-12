@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:400,500,600,700');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+div
+{
+    display: block;
+    position: relative;
+}
+.section_subtitle
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #72728c;
+    line-height: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.section_title
+{
+    color: #181818;
+    margin-top: 26px;
+}
+.adv
+{
+    margin-top: 150px;
+}
+.adv_head
+{
+    margin-bottom: 8%;
+}
+img
+{
+    height: 100%;
+    width: 100%;
+}
+.adv_img
+{
+    width: 100%;
+    height: 200px;
+}
+.item
+{
+    margin-bottom: 80px;
+}
+.item_dem
+{
+    /* padding-top: 2%; */
+    margin-bottom: 2%;
+}
+p
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.9285;
+    font-weight: 400;
+    color: #72728c;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-align:justify;
+    
+    /* padding: 8%; */
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:400,500,600,700');
+div.outer{
+    width: 350px;
+    height: 640px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+div.d1{
+    padding: 25px;
+}
+.input{
+    /* height: 50px;
+    width: 270px; */
+    height: 8%;
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: solid 2px white;
+    outline: none;
+    font-size: 18px;
+}
+.tag{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+.box{
+    margin-top:  10px;
+}
+.body{
+    background-image: linear-gradient(rgba(0,0,0,0.52),rgba(0,0,0,0.52)),url("../../assets/photos/cover_img.jpg");
+    background-position: 10% 10%;
+    height: 657px;
+}
+.btn{
+    margin-top: 20px;
+    height: 40px;
+    width: 270px;
+    border-radius: 20px;
+    opacity: 4;
+    border: solid 1px white;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: aliceblue;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+.login-form{
+    position:relative;
+    box-sizing:border-box;
+    transition:.5%;
+}
+div.outer:hover
+{
+    opacity: 10;
+    box-shadow: 0px 0px 8px 8px black;
+}
+.login-form input::placeholder{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+div.forget{
+    margin-top: 45px;
+}
+.list{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+
+.myclass{
+    border-bottom: 2px solid red;
+}
